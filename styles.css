@@ -1,0 +1,68 @@
+/* Reset margins, paddings, and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen photo and center alignment */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+    margin: 0;
+}
+
+/* Create a custom cursor effect */
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Default background color */
+}
+
+/* Custom cursor dot styling */
+body::before {
+    content: '';
+    position: fixed; /* Fixed position for cursor */
+    width: 16px; /* Width of the cursor dot */
+    height: 16px; /* Height of the cursor dot */
+    background-color: #fff; /* White color */
+    border-radius: 50%; /* Circular shape */
+    pointer-events: none; /* Ignore pointer events */
+    z-index: 9999; /* Make sure it is on top */
+}
+
+/* Track cursor position with JavaScript */
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+img {
+    position: absolute; /* Position the image absolutely */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+    max-width: none; /* Disable scaling */
+    max-height: none; /* Disable scaling */
+    width: auto; /* Maintain original width */
+    height: auto; /* Maintain original height */
+    object-fit: none; /* No fit */
+    border: none; /* Remove any default border */
+    outline: none; /* Remove default focus outline */
+    cursor: none; /* Hide cursor for images */
+}
+
+h1 {
+    position: absolute; /* Position title absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for center alignment */
+    color: #fff; /* White text */
+    font-size: 3rem; /* Adjust font size as needed */
+    line-height: 1.5; /* Increase line height for vertical elongation */
+    text-align: center; /* Center-align text */
+    z-index: 1; /* Ensure title is above the image */
+    font-family: 'Arial', sans-serif; /* Ensure consistent font family */
+}
